@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { bookHref, cases, clientNames, services } from "@/lib/site";
+import { bookHref, cases, clientNames, products, services } from "@/lib/site";
 import { CaseCard } from "@/components/CaseCard";
 import { CtaBand } from "@/components/CtaBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
@@ -16,7 +16,7 @@ const reasons: { value?: string; title: string; body: string }[] = [
   {
     value: "15+",
     title: "Years of delivery experience",
-    body: "Our team has helped deliver systems at national scale, including biometric registration covering over 34 million voters.",
+    body: "Our team brings more than 15 years of building, running and supporting software for government and enterprise organisations.",
   },
   {
     title: "Built for how Ghana works",
@@ -72,12 +72,22 @@ export default function Home() {
 
       <section aria-label="Clients and products" style={{ borderBottom: "1px solid var(--line)" }}>
         <div className="container clients">
-          <span className="clients__label">Work we've delivered for</span>
-          {clientNames.map((n) => (
-            <span key={n} className="clients__name">
-              {n}
-            </span>
-          ))}
+          <div className="clients__group">
+            <span className="clients__label">Our clients</span>
+            {clientNames.map((n) => (
+              <span key={n} className="clients__name">
+                {n}
+              </span>
+            ))}
+          </div>
+          <div className="clients__group clients__group--sep">
+            <span className="clients__label">Our product</span>
+            {products.map((p) => (
+              <Link key={p.slug} href="/products/" className="clients__name">
+                {p.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

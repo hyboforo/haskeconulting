@@ -15,7 +15,7 @@ export default function Work() {
         <div className="container">
           <p className="eyebrow">Our work</p>
           <h1 className="h-page">Work we've delivered.</h1>
-          <p className="lead">Real projects for real businesses, from online shops to systems that run a whole shop floor.</p>
+          <p className="lead">Projects we have delivered for our clients.</p>
         </div>
       </section>
       <section className="section">

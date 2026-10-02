@@ -4,7 +4,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "Products built and run by HaskeConsulting, including Taskers Ghana.",
+  description: "Taskers Ghana, the in-house product built and run by HaskeConsulting.",
 };
 
 export default function Products() {
@@ -13,10 +13,10 @@ export default function Products() {
       <section className="section section--soft">
         <div className="container">
           <p className="eyebrow">Products</p>
-          <h1 className="h-page">Products we build and run.</h1>
+          <h1 className="h-page">Our product.</h1>
           <p className="lead">
-            Alongside client work, we build and run our own platforms. Running them every day keeps us honest about what it
-            takes to keep software working after launch.
+            Alongside client work, we build and run our own product, Taskers Ghana. Running it every day keeps us honest about
+            what it takes to keep software working after launch.
           </p>
         </div>
       </section>

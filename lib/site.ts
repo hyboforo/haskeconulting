@@ -74,7 +74,7 @@ export const services: Service[] = [
       { title: "Domains, hosting and security", body: "Domain set-up, HTTPS, security headers and fast hosting on Cloudflare, handled for you." },
       { title: "Found and shared", body: "Search-friendly pages, sitemaps and proper previews when your links are shared on WhatsApp or LinkedIn." },
     ],
-    work: ["haneys-plant-buddy", "haskehub"],
+    work: ["haskehub"],
     tools: ["Next.js", "React", "TypeScript", "Cloudflare"],
   },
   {
@@ -191,29 +191,6 @@ export const cases: CaseStudy[] = [
     ],
   },
   {
-    slug: "haneys-plant-buddy",
-    client: "Haney's Plant Buddy",
-    tag: "E-commerce · Plants",
-    url: "https://www.haneyplantbuddies.com",
-    cover: "#d8e8d5",
-    summary: "An online plant shop delivering across Ghana, with bundles, WhatsApp ordering and a landscaping portfolio.",
-    brief:
-      "Haney's Plant Buddy sells indoor and outdoor plants for delivery across Ghana and also does landscaping. The website had to work as a shop and as a showcase for garden projects.",
-    built: [
-      "An online shop with categories, best sellers and plant-care products",
-      "Starter-kit bundles for new plant owners",
-      "Ordering on WhatsApp alongside the shop",
-      "A landscaping section showing compound and rooftop garden work",
-    ],
-    services: ["Web development"],
-    facts: [
-      { label: "Client", value: "Haney's Plant Buddy" },
-      { label: "Industry", value: "Plants & landscaping" },
-      { label: "Service", value: "Web development" },
-      { label: "Website", value: "haneyplantbuddies.com" },
-    ],
-  },
-  {
     slug: "haskehub",
     client: "HaskeHub",
     tag: "Marketplace · Platform",
@@ -238,5 +215,5 @@ export const cases: CaseStudy[] = [
   },
 ];
 
-/** Clients and products shown in the "Work we've done" strip. */
-export const clientNames = ["KODI Pets", "Haney's Plant Buddy", "HaskeHub", "Taskers Ghana"];
+/** Clients shown in the strip under the homepage hero. */
+export const clientNames = ["KODI Pets", "HaskeHub"];

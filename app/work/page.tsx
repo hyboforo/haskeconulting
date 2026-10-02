@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Our work",
-  description: "Case studies from HaskeConsulting clients across Ghana.",
+  description: "Software and websites HaskeConsulting has built for businesses in Ghana.",
 };
 
 export default function Work() {
@@ -14,7 +14,8 @@ export default function Work() {
       <section className="section section--soft">
         <div className="container">
           <p className="eyebrow">Our work</p>
-          <h1 className="h-page">Businesses we've helped grow online.</h1>
+          <h1 className="h-page">Work we've delivered.</h1>
+          <p className="lead">Real projects for real businesses, from online shops to systems that run a whole shop floor.</p>
         </div>
       </section>
       <section className="section">

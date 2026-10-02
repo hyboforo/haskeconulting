@@ -4,7 +4,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = {
   title: "Products",
-  description: "Ready-made digital products from HaskeConsulting, set up in days with local support.",
+  description: "Products built and run by HaskeConsulting, including Taskers Ghana.",
 };
 
 export default function Products() {
@@ -13,9 +13,10 @@ export default function Products() {
       <section className="section section--soft">
         <div className="container">
           <p className="eyebrow">Products</p>
-          <h1 className="h-page">Ready-made tools, set up in days.</h1>
+          <h1 className="h-page">Products we build and run.</h1>
           <p className="lead">
-            Proven products we maintain and improve every month. You get your own branded setup, training and local support.
+            Alongside client work, we build and run our own platforms. Running them every day keeps us honest about what it
+            takes to keep software working after launch.
           </p>
         </div>
       </section>
@@ -28,7 +29,7 @@ export default function Products() {
                 <h2 style={{ fontSize: 32 }}>{p.name}</h2>
                 <p style={{ fontSize: 19, color: "var(--text)" }}>{p.tagline}</p>
                 <p><strong>Best for:</strong> {p.forWho}</p>
-                <p style={{ fontWeight: 600, color: "var(--accent)" }}>{p.price}</p>
+                {p.price && <p style={{ fontWeight: 600, color: "var(--accent)" }}>{p.price}</p>}
                 <div className="btn-row" style={{ marginTop: 8 }}>
                   {p.url ? (
                     <a href={p.url} className="btn btn--solid" rel="noopener">
@@ -51,7 +52,7 @@ export default function Products() {
         </div>
       </section>
 
-      <CtaBand title="Not sure which product fits?" />
+      <CtaBand />
     </>
   );
 }

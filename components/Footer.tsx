@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { site, whatsappHref } from "@/lib/site";
+import { services, site, whatsappHref } from "@/lib/site";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -14,12 +14,16 @@ export function Footer() {
         </div>
         <div className="site-footer__col">
           <strong>Services</strong>
-          <Link href="/products/">Products</Link>
-          <Link href="/bespoke/">Bespoke builds</Link>
-          <Link href="/work/">Our work</Link>
+          {services.map((s) => (
+            <Link key={s.slug} href={`/services/${s.slug}/`}>
+              {s.name}
+            </Link>
+          ))}
         </div>
         <div className="site-footer__col">
           <strong>Company</strong>
+          <Link href="/work/">Our work</Link>
+          <Link href="/products/">Products</Link>
           <Link href="/about/">About</Link>
           <Link href="/contact/">Contact</Link>
           <Link href="/privacy/">Privacy</Link>

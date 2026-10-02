@@ -95,15 +95,6 @@ export default function About() {
         </div>
       </section>
 
-      <section className="section section--soft">
-        <div className="container grid grid--wide">
-          <h2 className="h-section">Our story</h2>
-          <p className="muted" style={{ margin: 0, fontSize: 18 }}>
-            [Two or three sentences: when you started, why, and the kinds of businesses you most like working with.]
-          </p>
-        </div>
-      </section>
-
       <section className="section" aria-labelledby="team-heading">
         <div className="container">
           <h2 id="team-heading" className="h-section" style={{ marginBottom: 40 }}>The team</h2>

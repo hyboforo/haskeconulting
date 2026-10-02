@@ -1,0 +1,5 @@
+# Old addresses → new ones (Cloudflare static assets read this file).
+/bespoke /services/software-development/ 301
+/bespoke/ /services/software-development/ 301
+/work/kodi-pet-shop /work/kodi-pets/ 301
+/work/kodi-pet-shop/ /work/kodi-pets/ 301

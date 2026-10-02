@@ -74,4 +74,13 @@ export const team: Person[] = [
     skills: ["Java & Spring Boot", "REST APIs", "PostgreSQL", "Docker", "Automated testing"],
     qualification: "BSc Information Technology, Ghana Communication Technology University",
   },
+  {
+    name: "Angela Ayettey",
+    initials: "AA",
+    role: "Quality Assurance",
+    photo: "",
+    linkedin: "https://www.linkedin.com/in/angela-ayettey-b18706361/",
+    short:
+      "Angela looks after quality assurance at HaskeConsulting: planning tests, checking every release against what was agreed with the client, and supporting user acceptance testing before anything goes live.",
+  },
 ];

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { cases } from "@/lib/site";
+import { cases, services } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 
 export const dynamicParams = false;
@@ -13,7 +13,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const c = cases.find((x) => x.slug === slug);
-  return c ? { title: `${c.client} case study`, description: c.summary } : {};
+  return c ? { title: `${c.client}: our work`, description: c.summary } : {};
 }
 
 export default async function CasePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -21,6 +21,9 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
   const c = cases.find((x) => x.slug === slug);
   if (!c) notFound();
   const others = cases.filter((x) => x.slug !== c.slug);
+  const serviceLinks = c.services
+    .map((name) => services.find((s) => s.name === name))
+    .filter((s): s is NonNullable<typeof s> => Boolean(s));
 
   return (
     <>
@@ -50,24 +53,32 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
               </div>
             ))}
           </dl>
-          <div className="placeholder" style={{ aspectRatio: "16 / 8", marginTop: 32, background: c.imageBg }}>
-            [Screenshot: {c.client}]
-          </div>
         </div>
       </section>
 
       <section className="section">
         <div className="container prose">
-          <h2>The challenge</h2>
-          <p>{c.challenge}</p>
+          <h2 style={{ marginTop: 0 }}>The brief</h2>
+          <p>{c.brief}</p>
           <h2>What we built</h2>
           <ul>
-            {c.solution.map((s) => (
+            {c.built.map((s) => (
               <li key={s}>{s}</li>
             ))}
           </ul>
-          <h2>The result</h2>
-          <p>{c.result}</p>
+          {serviceLinks.length > 0 && (
+            <>
+              <h2>Services</h2>
+              <p>
+                {serviceLinks.map((s, i) => (
+                  <span key={s.slug}>
+                    {i > 0 && " · "}
+                    <Link href={`/services/${s.slug}/`}>{s.name}</Link>
+                  </span>
+                ))}
+              </p>
+            </>
+          )}
         </div>
       </section>
 

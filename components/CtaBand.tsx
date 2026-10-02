@@ -9,7 +9,8 @@ export function CtaBand({ title = "Have a project in mind?" }: { title?: string 
         <div style={{ maxWidth: 620 }}>
           <h2 className="h-section">{title}</h2>
           <p className="lead" style={{ marginTop: 12 }}>
-            Tell us what you're trying to do. We'll tell you honestly whether a product fits or a bespoke build makes more sense.
+            Tell us what you're trying to do. We'll give you an honest view of what it takes: the scope, the timeline and
+            the cost.
           </p>
         </div>
         <div className="btn-row" style={{ marginTop: 0 }}>

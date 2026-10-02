@@ -10,7 +10,7 @@ export default function Privacy() {
       <div className="container prose">
         <p className="eyebrow">Privacy</p>
         <h1 className="h-page">Privacy notice</h1>
-        <p>Last updated: [date]</p>
+        <p>Last updated: 2 October 2026</p>
         <p>
           This notice covers {site.url.replace("https://", "")}, run by {site.name}, a {site.parent.name} company.
         </p>

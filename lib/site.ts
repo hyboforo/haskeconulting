@@ -2,7 +2,7 @@
 export const site = {
   name: "HaskeConsulting",
   parent: { name: "Haske Group Holdings", url: "https://www.haskegroupholdings.com" },
-  url: "https://www.haskeconsulting.com",
+  url: "https://haskeconsulting.com",
   description:
     "HaskeConsulting builds digital products and bespoke software for businesses in Ghana: online shops, booking and operations tools, websites and apps.",
   // TODO: confirm the real inbox before launch.

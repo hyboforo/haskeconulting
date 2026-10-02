@@ -43,8 +43,10 @@ npm run deploy
 1. The domain **haskeconsulting.com** must be on Cloudflare (Add a domain → change nameservers at your registrar).
 2. In the Worker, go to **Settings → Domains & Routes → Add → Custom domain** and add both
    `haskeconsulting.com` and `www.haskeconsulting.com`.
-3. The site's canonical URL is `https://www.haskeconsulting.com` (set in `lib/site.ts`). To send the bare domain there,
-   add a redirect rule: **Rules → Redirect Rules → Redirect from root to WWW** template.
+3. The site's canonical URL is `https://haskeconsulting.com` (set in `lib/site.ts`), without www. To send www there:
+   - **DNS → Add record**: type `A`, name `www`, IPv4 `192.0.2.1`, **Proxied** (orange cloud). The IP is a placeholder;
+     Cloudflare answers the request and the redirect below sends visitors on before it is ever used.
+   - **Rules → Redirect Rules → Create from template → Redirect from WWW to root**.
 
 ## What's configured
 

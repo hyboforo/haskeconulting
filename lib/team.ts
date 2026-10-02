@@ -28,10 +28,10 @@ export const founder: Founder = {
   photo: "",
   linkedin: "https://www.linkedin.com/in/hananboforo/",
   short:
-    "15+ years delivering national-scale identity systems across Africa, rising from developer to General Manager at GenKey Africa. Leads HaskeConsulting's strategy, delivery and engineering.",
+    "15+ years delivering national-scale identity and payments systems across Africa, from hands-on development to running engineering teams. Leads HaskeConsulting's strategy, delivery and engineering.",
   bio: [
-    "Hanan co-founded HaskeConsulting and leads it as CEO. He has spent more than 15 years building and running software that has to work at national scale. At GenKey Africa he rose from developer to General Manager, helping deliver biometric voter registration and deduplication covering over 34 million voters in Ghana, Cameroon and Tanzania, and biometric health-insurance registration in Ghana and Kenya.",
-    "He led the move of GenKey's products to Docker and Kubernetes, cutting the time to set up test and demo environments by about 40%, and runs a 25-person engineering, DevOps, QA and support team serving more than 20 government and enterprise clients. At Brij he led payment-partner integrations with platforms such as Remita and Quickteller, cutting integration time by about 30%.",
+    "Hanan co-founded HaskeConsulting and leads it as CEO. He has spent more than 15 years building and running software that has to work at national scale, growing from developer to leading a full engineering organisation. He has helped deliver biometric voter registration and deduplication covering over 34 million voters in Ghana, Cameroon and Tanzania, and biometric health-insurance registration in Ghana and Kenya.",
+    "He led the move of a full product suite to Docker and Kubernetes, cutting the time to set up test and demo environments by about 40%, and has run a 25-person engineering, DevOps, QA and support team serving more than 20 government and enterprise clients. At Brij he led payment-partner integrations with platforms such as Remita and Quickteller, cutting integration time by about 30%.",
     "He has stayed hands-on throughout, and still writes code, reviews it and handles technical escalations. That's the standard he sets for HaskeConsulting: the people who plan your project are the people who build it.",
   ],
   highlights: [

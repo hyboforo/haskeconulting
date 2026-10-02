@@ -795,6 +795,7 @@ h3 {
 .team-grid {
   display: grid;
   gap: 24px;
+  align-items: start;
   grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
 }
 .team-card {
@@ -825,4 +826,31 @@ h3 {
   margin: 0;
   font-size: 15px;
   line-height: 1.55;
+}
+
+.chips {
+  list-style: none;
+  margin: 10px 0 2px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.chips li {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--accent-dark);
+}
+.team-card__edu {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.team-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
 }

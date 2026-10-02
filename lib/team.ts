@@ -8,13 +8,18 @@ export type Person = {
   name: string;
   initials: string;
   role: string;
-  /** One or two sentences for the team card. */
+  /** A few sentences for the team card. */
   short: string;
   photo?: string;
   linkedin?: string;
+  github?: string;
+  /** Optional skill tags shown on the team card. */
+  skills?: string[];
+  /** Optional one-line qualification shown on the team card. */
+  qualification?: string;
 };
 
-export type Founder = Person & {
+export type Founder = Omit<Person, "qualification"> & {
   /** Paragraphs for the founder section. */
   bio: string[];
   highlights: { value: string; label: string }[];
@@ -46,9 +51,27 @@ export const founder: Founder = {
   ],
 };
 
-// TODO: replace the placeholders with the rest of the team, or delete them.
 export const team: Person[] = [
   founder,
-  { name: "[Name]", initials: "", role: "Co-founder", short: "[One or two sentences about what they do and their background.]" },
-  { name: "[Name]", initials: "", role: "[Role]", short: "[One or two sentences.]" },
+  {
+    name: "Whitney Adu-Yaro",
+    initials: "WA",
+    role: "Co-founder & COO",
+    photo: "",
+    short:
+      "Whitney co-founded HaskeConsulting and runs the business day to day as Chief Operating Officer, keeping projects, people and clients moving together. Whitney also leads creative direction and marketing: the brand, the campaigns, and how the work we do for clients is presented to the world.",
+    skills: ["Operations", "Creative direction", "Marketing"],
+  },
+  {
+    name: "Salifu Boforo Yakubu",
+    initials: "SY",
+    role: "Co-founder & Lead Developer",
+    photo: "",
+    linkedin: "https://www.linkedin.com/in/salifu-yakubu",
+    github: "https://github.com/salifu25",
+    short:
+      "Salifu leads development at HaskeConsulting, building the Java and Spring Boot backends behind our products, with automated testing built in from the start. At Patatte, Salifu leads backend development for a food-ordering product and designed its order and notification services.",
+    skills: ["Java & Spring Boot", "REST APIs", "PostgreSQL", "Docker", "Automated testing"],
+    qualification: "BSc Information Technology, Ghana Communication Technology University",
+  },
 ];

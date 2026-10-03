@@ -57,7 +57,7 @@ export const team: Person[] = [
     role: "Co-founder & COO",
     photo: "",
     short:
-      "Whitney co-founded HaskeConsulting and runs the business day to day as Chief Operating Officer, keeping projects, people and clients moving together. Whitney also leads creative direction and marketing: the brand, the campaigns, and how the work we do for clients is presented to the world.",
+      "Whitney co-founded HaskeConsulting and, as Chief Operating Officer, runs the business day to day, keeping projects, people and clients moving together. Whitney also leads creative direction and marketing: the brand, the campaigns and the way our work for clients is presented to the world.",
     skills: ["Operations", "Creative direction", "Marketing"],
   },
   {

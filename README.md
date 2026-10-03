@@ -50,16 +50,13 @@ npm run deploy
 
 ## Contact form
 
-The form on /contact/ posts to `/api/enquiry`, handled by `worker/index.js`. Until email is set up, a visitor who
-sends the form is offered **Send on WhatsApp** and **Send by email** with their message already written in, so
-nothing is lost. To have enquiries arrive by email instead:
+The form on /contact/ posts to `/api/enquiry`, handled by `worker/index.js`, which emails each enquiry through
+Cloudflare Email Routing to the inbox set in `wrangler.jsonc` (`send_email` and `vars`; now hyboforo@gmail.com).
+If sending fails, the visitor is offered **Send on WhatsApp** and **Send by email** with their message already
+written in, so nothing is lost.
 
-1. In the Cloudflare dashboard, open **haskeconsulting.com → Email → Email Routing** and turn it on (it adds the
-   DNS records it needs).
-2. Under **Destination addresses**, add the inbox that should receive enquiries (e.g. your Gmail) and click the
-   link Cloudflare emails to it.
-3. In `wrangler.jsonc`, put a comma after the `"previews"` block and uncomment the `send_email` and `vars` lines,
-   with that inbox in both places. Push to `main`.
+To change the inbox: add and verify the new address under **haskeconsulting.com → Email → Email Routing →
+Destination addresses**, then change both `hyboforo@gmail.com` entries in `wrangler.jsonc` and push to `main`.
 
 Spam is kept out by a hidden field and a minimum time to fill the form; there is no captcha.
 

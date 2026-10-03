@@ -84,15 +84,6 @@ export default function About() {
                 </div>
               ))}
             </dl>
-
-            <div>
-              <h3 className="founder__subhead">Education</h3>
-              <ul className="founder__list">
-                {founder.education.map((e) => (
-                  <li key={e}>{e}</li>
-                ))}
-              </ul>
-            </div>
           </div>
         </div>
       </section>

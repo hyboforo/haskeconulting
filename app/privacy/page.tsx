@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = pageMeta({
+  title: "Privacy",
+  description: "How HaskeConsulting handles the personal information you share with us.",
+  path: "privacy/",
+});
 
 // TODO: have this reviewed against Ghana's Data Protection Act, 2012 (Act 843) before launch.
 export default function Privacy() {

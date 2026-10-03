@@ -1,9 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { bookHref, cases, clientNames, products, services } from "@/lib/site";
+import { pageMeta } from "@/lib/seo";
+import { bookHref, cases, clientNames, products, services, site } from "@/lib/site";
 import { CaseCard } from "@/components/CaseCard";
 import { CtaBand } from "@/components/CtaBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { Arrow } from "@/components/Icons";
+
+export const metadata: Metadata = pageMeta({ description: site.description, path: "" });
 
 const steps = [
   { title: "Discover", body: "We learn how your business works and what success looks like, then agree a written scope." },

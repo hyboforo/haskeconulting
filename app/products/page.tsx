@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { products, site } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Products",
   description: "Taskers Ghana, the in-house product built and run by HaskeConsulting.",
-};
+  path: "products/",
+});
 
 export default function Products() {
   return (

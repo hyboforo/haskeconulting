@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { bookHref, site, whatsappHref } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Contact",
   description: "Book a consultation or get in touch with HaskeConsulting.",
-};
+  path: "contact/",
+});
 
 export default function Contact() {
   return (

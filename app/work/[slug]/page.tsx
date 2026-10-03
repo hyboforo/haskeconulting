@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cases, services } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
+import { CaseScreenshot } from "@/components/CaseCard";
 
 export const dynamicParams = false;
 
@@ -13,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const c = cases.find((x) => x.slug === slug);
-  return c ? { title: `${c.client}: our work`, description: c.summary } : {};
+  return c ? pageMeta({ title: `${c.client}: our work`, description: c.summary, path: `work/${c.slug}/` }) : {};
 }
 
 export default async function CasePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -45,6 +47,7 @@ export default async function CasePage({ params }: { params: Promise<{ slug: str
 
       <section className="section" style={{ paddingBottom: 0 }}>
         <div className="container">
+          <CaseScreenshot c={c} />
           <dl className="facts" style={{ margin: 0 }}>
             {c.facts.map((f) => (
               <div key={f.label}>

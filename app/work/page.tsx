@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { cases } from "@/lib/site";
 import { CaseCard } from "@/components/CaseCard";
 import { CtaBand } from "@/components/CtaBand";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Our work",
   description: "Software and websites HaskeConsulting has built for businesses in Ghana.",
-};
+  path: "work/",
+});
 
 export default function Work() {
   return (

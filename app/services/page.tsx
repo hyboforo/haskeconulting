@@ -1,15 +1,17 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { bookHref, services } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { Arrow } from "@/components/Icons";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "Services",
   description:
     "Software development, web development, IT consulting and IT project management from HaskeConsulting in Accra.",
-};
+  path: "services/",
+});
 
 const engagements = [
   {

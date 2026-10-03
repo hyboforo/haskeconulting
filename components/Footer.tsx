@@ -23,6 +23,7 @@ export function Footer() {
         <div className="site-footer__col">
           <strong>Company</strong>
           <Link href="/work/">Our work</Link>
+          <Link href="/clients/">Clients</Link>
           <Link href="/products/">Products</Link>
           <Link href="/about/">About</Link>
           <Link href="/contact/">Contact</Link>

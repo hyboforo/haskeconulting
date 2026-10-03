@@ -41,7 +41,7 @@ export default function Contact() {
           {whatsappHref && (
             <div className="card">
               <h3>WhatsApp</h3>
-              <p>Prefer chatting? Message us and we'll reply during working hours.</p>
+              <p>Prefer chatting? Message us on {site.phone} and we'll reply during working hours.</p>
               <a href={whatsappHref} className="btn btn--ghost" style={{ marginTop: 12, alignSelf: "flex-start" }}>
                 Chat on WhatsApp
               </a>

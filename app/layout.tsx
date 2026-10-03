@@ -26,6 +26,7 @@ const organization = {
   image: `${site.url}/opengraph-image.png`,
   description: site.description,
   email: site.email,
+  telephone: site.phone,
   address: { "@type": "PostalAddress", addressLocality: "Accra", addressCountry: "GH" },
   areaServed: { "@type": "Country", name: "Ghana" },
   parentOrganization: { "@type": "Organization", name: site.parent.name, url: site.parent.url },

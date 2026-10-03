@@ -79,9 +79,9 @@ export default function Home() {
           <div className="clients__group">
             <span className="clients__label">Our clients</span>
             {clientNames.map((n) => (
-              <span key={n} className="clients__name">
+              <Link key={n} href="/clients/" className="clients__name">
                 {n}
-              </span>
+              </Link>
             ))}
           </div>
           <div className="clients__group clients__group--sep">

@@ -9,7 +9,9 @@ export const site = {
   email: "hello@haskeconsulting.com",
   // WhatsApp number in international format without + or spaces, e.g. "233200000000".
   // Leave empty to hide the WhatsApp buttons.
-  whatsapp: "",
+  whatsapp: "233264164445",
+  /** Shown to people and search engines. */
+  phone: "+233 26 416 4445",
   // Link to a booking page (Calendly, Cal.com, Google Calendar). Empty = falls back to email.
   bookingUrl: "",
   // Street address is optional; the town is enough until you have an office to show.
@@ -24,6 +26,7 @@ export const whatsappHref = site.whatsapp
 export const nav = [
   { href: "/services/", label: "Services" },
   { href: "/work/", label: "Our work" },
+  { href: "/clients/", label: "Clients" },
   { href: "/products/", label: "Products" },
   { href: "/about/", label: "About" },
 ];
@@ -218,7 +221,7 @@ export const cases: CaseStudy[] = [
       { label: "Client", value: "Haney's Plant Buddy" },
       { label: "Industry", value: "Plants & landscaping" },
       { label: "Service", value: "Web development" },
-      { label: "Website", value: "haneyplantbuddies.com" },
+      { label: "Website", value: "www.haneyplantbuddies.com" },
     ],
   },
   {
@@ -243,7 +246,7 @@ export const cases: CaseStudy[] = [
       { label: "Client", value: "HaskeHub, a Haske Group company" },
       { label: "Industry", value: "Creator marketing" },
       { label: "Service", value: "Web platform" },
-      { label: "Website", value: "haskehub.com" },
+      { label: "Website", value: "www.haskehub.com" },
     ],
   },
 ];

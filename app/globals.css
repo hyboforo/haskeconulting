@@ -1170,3 +1170,61 @@ a.clients__name:hover {
   width: 100%;
   height: auto;
 }
+
+/* Clients page: one row per client, cover beside the story; stacked on phones. */
+.client-list {
+  display: grid;
+  gap: 56px;
+}
+.client-row {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+}
+.client-row__cover {
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  text-decoration: none;
+  color: inherit;
+}
+.client-row__cover:hover .case-cover__shot {
+  transform: translateY(-6px);
+}
+.client-row__name {
+  font-family: var(--display);
+  font-size: clamp(28px, 3.4vw, 40px);
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+}
+.client-row .chips a {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 760px) {
+  .client-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .client-row__cover:hover .case-cover__shot {
+    transform: none;
+  }
+}
+.case-cover--bare.case-cover--shot .case-cover__shot {
+  top: 14%;
+}
+.case-cover--bare:not(.case-cover--shot) {
+  align-items: center;
+  justify-content: center;
+}
+.case-cover__initials {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: clamp(64px, 9vw, 112px);
+  letter-spacing: -0.04em;
+  color: rgba(22, 24, 29, 0.78);
+}

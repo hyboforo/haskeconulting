@@ -195,7 +195,7 @@ export const cases: CaseStudy[] = [
       { label: "Industry", value: "Pet retail & grooming" },
       { label: "Delivery", value: "Milestones, each signed off by the client" },
       { label: "Built with", value: "Kotlin, Spring Boot, PostgreSQL, React" },
-      { label: "Website", value: "kodipetshop.com" },
+      { label: "Website", value: "www.kodipetshop.com" },
     ],
   },
   {

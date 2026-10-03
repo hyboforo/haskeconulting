@@ -22,7 +22,7 @@ export function CaseCover({ c, large = false, heading = false }: { c: CaseStudy;
 /** The live product in a simple browser frame, for the top of a case study. */
 export function CaseScreenshot({ c }: { c: CaseStudy }) {
   if (!c.image) return null;
-  const host = c.url ? new URL(c.url).hostname.replace(/^www\./, "") : null;
+  const host = c.url ? new URL(c.url).hostname : null;
   return (
     <figure className="browser">
       <div className="browser__bar" aria-hidden="true">

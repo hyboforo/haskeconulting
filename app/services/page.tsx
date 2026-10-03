@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
-import { bookHref, services } from "@/lib/site";
+import { bookHref, engagements, faqs, services } from "@/lib/site";
 import { CtaBand } from "@/components/CtaBand";
 import { ServiceIcon } from "@/components/ServiceIcon";
 import { Arrow } from "@/components/Icons";
@@ -12,21 +12,6 @@ export const metadata: Metadata = pageMeta({
     "Software development, web development, IT consulting and IT project management from HaskeConsulting in Accra.",
   path: "services/",
 });
-
-const engagements = [
-  {
-    title: "A fixed-scope project",
-    body: "A defined system or website, delivered in milestones with an agreed price for each one.",
-  },
-  {
-    title: "Advice and reviews",
-    body: "A consultation, an architecture or security review, or a second opinion on a supplier's proposal.",
-  },
-  {
-    title: "Ongoing support",
-    body: "Hosting, monitoring, updates and improvements after launch, on a monthly plan.",
-  },
-];
 
 export default function Services() {
   return (
@@ -56,7 +41,7 @@ export default function Services() {
                 <h2>{s.name}</h2>
                 <p className="muted">{s.short}</p>
                 <Link href={`/services/${s.slug}/`} className="service-card__more">
-                  More about {s.name.toLowerCase()} <Arrow />
+                  More about {s.name.replace(/^(?!IT )\w/, (c) => c.toLowerCase())} <Arrow />
                 </Link>
               </div>
               <ul className="tiles service-row__list">
@@ -74,16 +59,49 @@ export default function Services() {
       <section className="section section--soft">
         <div className="container">
           <p className="eyebrow">Ways to work with us</p>
-          <h2 className="h-section" style={{ marginBottom: 40 }}>Start small or hand us the whole project.</h2>
+          <h2 className="h-section" style={{ marginBottom: 16 }}>Start small or hand us the whole project.</h2>
+          <p className="lead" style={{ marginBottom: 40 }}>
+            Your first consultation is free. After that, you always know the price before the work starts.
+          </p>
           <div className="grid">
             {engagements.map((e) => (
               <div key={e.title} className="card">
                 <h3>{e.title}</h3>
                 <p>{e.body}</p>
+                <p className="engagement__price">
+                  <strong>How it&apos;s priced:</strong> {e.price}
+                </p>
               </div>
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="section" aria-labelledby="faq-heading">
+        <div className="container faq">
+          <div>
+            <p className="eyebrow">Questions</p>
+            <h2 id="faq-heading" className="h-section">What people ask us first.</h2>
+          </div>
+          <div className="faq__list">
+            {faqs.map((f) => (
+              <details key={f.q}>
+                <summary>{f.q}</summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+            }),
+          }}
+        />
       </section>
 
       <CtaBand />

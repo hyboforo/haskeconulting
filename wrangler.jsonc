@@ -1,7 +1,6 @@
 {
   // Cloudflare Workers config. `npm run deploy` builds ./out and uploads it.
-  // Must match the Worker's name in Cloudflare, which is spelled like the GitHub repo (no second "s").
-  // Workers Builds stops at once when the two differ.
+  // The Worker's name in Cloudflare, which is spelled like the GitHub repo (no second "s").
   "name": "haskeconulting",
   "compatibility_date": "2026-09-01",
   // Only the contact form's /api/enquiry runs code (worker/index.js); every other address is a static file.
@@ -11,12 +10,14 @@
     "binding": "ASSETS",
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
-  }
+  },
+  // Pull requests get a preview copy from `wrangler preview`, which needs this block (it can stay empty).
+  "previews": {}
 
   // Contact form email. Until these are set, the form offers WhatsApp and email with the message written in.
   // Turn on Email Routing for haskeconsulting.com and verify the receiving inbox first (README, "Contact form"),
-  // then put a comma after the "assets" block above and uncomment these two lines with the real inbox:
+  // then put a comma after the "previews" block above and uncomment these two lines:
   //
-  // "send_email": [{ "name": "ENQUIRY_EMAIL", "destination_address": "inbox@example.com" }],
-  // "vars": { "ENQUIRY_FROM": "website@haskeconsulting.com", "ENQUIRY_TO": "inbox@example.com" }
+  // "send_email": [{ "name": "ENQUIRY_EMAIL", "destination_address": "hyboforo@gmail.com" }],
+  // "vars": { "ENQUIRY_FROM": "website@haskeconsulting.com", "ENQUIRY_TO": "hyboforo@gmail.com" }
 }

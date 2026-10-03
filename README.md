@@ -58,7 +58,7 @@ nothing is lost. To have enquiries arrive by email instead:
    DNS records it needs).
 2. Under **Destination addresses**, add the inbox that should receive enquiries (e.g. your Gmail) and click the
    link Cloudflare emails to it.
-3. In `wrangler.jsonc`, put a comma after the `"assets"` block and uncomment the `send_email` and `vars` lines,
+3. In `wrangler.jsonc`, put a comma after the `"previews"` block and uncomment the `send_email` and `vars` lines,
    with that inbox in both places. Push to `main`.
 
 Spam is kept out by a hidden field and a minimum time to fill the form; there is no captcha.

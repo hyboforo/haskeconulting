@@ -11,6 +11,8 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*"]
   },
+  // Keeps the Worker's logs (e.g. a failed enquiry email) under Workers → haskeconulting → Logs.
+  "observability": { "enabled": true },
   // Pull requests get a preview copy from `wrangler preview`, which needs this block (it can stay empty).
   "previews": {},
 

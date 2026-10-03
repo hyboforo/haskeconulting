@@ -50,14 +50,18 @@ async function enquiry(request, env) {
   if (e.message.length < 10) missing.message = "Please tell us a little about what you need.";
   if (Object.keys(missing).length) return json({ error: "invalid", fields: missing }, 422);
 
-  if (!env.ENQUIRY_EMAIL || !env.ENQUIRY_FROM || !env.ENQUIRY_TO) return json({ error: "not_configured" }, 503);
+  if (!env.ENQUIRY_EMAIL || !env.ENQUIRY_FROM || !env.ENQUIRY_TO) {
+    console.warn("Enquiry not sent: the email binding or its addresses are missing");
+    return json({ error: "not_configured" }, 503);
+  }
 
   try {
     await env.ENQUIRY_EMAIL.send(new EmailMessage(env.ENQUIRY_FROM, env.ENQUIRY_TO, mime(e, env)));
   } catch (err) {
-    console.error("Enquiry email failed", err);
+    console.error("Enquiry email failed:", err && err.message ? err.message : String(err));
     return json({ error: "send_failed" }, 502);
   }
+  console.log("Enquiry emailed to", env.ENQUIRY_TO);
   return json({ ok: true });
 }
 

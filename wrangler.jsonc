@@ -1,6 +1,8 @@
 {
   // Cloudflare Workers config. `npm run deploy` builds ./out and uploads it.
-  "name": "haskeconsulting",
+  // Must match the Worker's name in Cloudflare, which is spelled like the GitHub repo (no second "s").
+  // Workers Builds stops at once when the two differ.
+  "name": "haskeconulting",
   "compatibility_date": "2026-09-01",
   // Only the contact form's /api/enquiry runs code (worker/index.js); every other address is a static file.
   "main": "worker/index.js",

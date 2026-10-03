@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { bookHref, cases, services } from "@/lib/site";
@@ -15,7 +16,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const s = services.find((x) => x.slug === slug);
-  return s ? { title: s.name, description: `${s.short} ${s.intro}`.slice(0, 300) } : {};
+  return s ? pageMeta({ title: s.name, description: s.short, path: `services/${s.slug}/` }) : {};
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {

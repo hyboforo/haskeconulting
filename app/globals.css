@@ -1060,7 +1060,7 @@ h3 {
 
 /* ---- Case covers ---- */
 .case-cover {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 11;
   padding: 24px;
   display: flex;
   flex-direction: column;
@@ -1109,4 +1109,64 @@ h3 {
 }
 a.clients__name:hover {
   color: var(--accent);
+}
+
+/* Case covers with a screenshot rising from the bottom edge. */
+.case-cover--shot {
+  position: relative;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.case-cover__shot {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 46%;
+  width: 76%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 10px 30px rgba(22, 24, 29, 0.18);
+  transition: transform 0.25s ease;
+}
+.case:hover .case-cover__shot {
+  transform: translateY(-6px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .case:hover .case-cover__shot {
+    transform: none;
+  }
+}
+
+/* A live product in a plain browser frame, on a case study. */
+.browser {
+  margin: 0 0 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(15, 61, 51, 0.1);
+}
+.browser__bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: #f6f7f6;
+}
+.browser__bar > span:not(.browser__url) {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9dcda;
+}
+.browser__url {
+  margin-left: 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.browser img {
+  display: block;
+  width: 100%;
+  height: auto;
 }

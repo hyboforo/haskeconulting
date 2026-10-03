@@ -3,6 +3,7 @@ export const site = {
   name: "HaskeConsulting",
   parent: { name: "Haske Group Holdings", url: "https://haskegroupholdings.com" },
   url: "https://haskeconsulting.com",
+  tagline: "Software, web and IT consulting in Accra",
   description:
     "HaskeConsulting is an Accra-based technology company offering software development, web development, IT consulting and IT project management.",
   email: "hello@haskeconsulting.com",
@@ -74,7 +75,7 @@ export const services: Service[] = [
       { title: "Domains, hosting and security", body: "Domain set-up, HTTPS, security headers and fast hosting on Cloudflare, handled for you." },
       { title: "Found and shared", body: "Search-friendly pages, sitemaps and proper previews when your links are shared on WhatsApp or LinkedIn." },
     ],
-    work: ["haneys-plant-buddy", "haskehub"],
+    work: ["kodi-pets", "haneys-plant-buddy", "haskehub"],
     tools: ["Next.js", "React", "TypeScript", "Cloudflare"],
   },
   {
@@ -154,6 +155,8 @@ export type CaseStudy = {
   url?: string;
   /** Background colour for the card cover. */
   cover: string;
+  /** A screenshot of the live product, 1200×750, in /public/work/. Without one the card shows the colour cover. */
+  image?: { src: string; alt: string };
   summary: string;
   /** What the client needed. */
   brief: string;
@@ -167,27 +170,32 @@ export const cases: CaseStudy[] = [
     slug: "kodi-pets",
     client: "KODI Pets",
     tag: "Pet retail & grooming",
+    url: "https://www.kodipetshop.com",
     cover: "#eadfcf",
+    image: { src: "/work/kodi-pets.webp", alt: "The KODI Pets website: a freshly groomed white dog on the grooming table, with buttons to book a groom or chat on WhatsApp" },
     summary:
-      "One system for a pet shop and grooming salon: customers and pets, grooming bookings, the till, stock and text-message reminders.",
+      "The website and the system behind a pet shop and grooming salon: online booking, customers and pets, the grooming day, the till, stock and text messages.",
     brief:
-      "KODI Pets needed one place for everything the shop does, sharing a single record for every customer and pet: front-desk sales, grooming appointments, stock with expiry dates and customer messages. The till had to keep selling when the internet dropped.",
+      "KODI Pets needed one place for everything the shop does, sharing a single record for every customer and pet: a website customers can book from, grooming appointments, front-desk sales, stock with expiry dates and customer messages. The till had to keep selling when the internet dropped.",
     built: [
-      "Customer and pet records with a shared timeline, duplicate checks and photos",
-      "A grooming calendar priced by pet size, with online booking confirmed by SMS code",
-      "Point of sale with mobile money and cash, receipts, refunds and end-of-day cash-up",
+      "A public website where customers book a groom online and manage their pets from their own account, signing in with a code by SMS",
+      "Online bookings that staff confirm or decline, with an alert on every staff screen the moment one arrives and a text to the customer either way",
+      "A grooming board and calendar for the day, priced by pet size, with staff assigning each groomer",
+      "Customer and pet records with vaccinations, signed consents, a shared timeline, duplicate checks and photos",
+      "Point of sale with mobile money, card and cash, receipts, refunds and end-of-day cash-up",
       "A till that keeps selling offline and uploads everything when the connection returns",
       "Stock tracked by batch and expiry date, with low-stock alerts",
-      "Automatic SMS confirmations and reminders",
+      "Automatic SMS confirmations and reminders, with a message log that shows failed or stuck texts and sends them again",
       "A dashboard and reports that export to Excel, CSV and PDF",
-      "Separate access for front desk, supervisors and owners, with a full audit log",
+      "A separate staff address, roles for front desk, supervisors and owners, and a full audit log",
     ],
-    services: ["Software development", "IT project management", "IT consulting"],
+    services: ["Software development", "Web development", "IT project management", "IT consulting"],
     facts: [
       { label: "Client", value: "KODI Pets" },
       { label: "Industry", value: "Pet retail & grooming" },
       { label: "Delivery", value: "Milestones, each signed off by the client" },
       { label: "Built with", value: "Kotlin, Spring Boot, PostgreSQL, React" },
+      { label: "Website", value: "www.kodipetshop.com" },
     ],
   },
   {
@@ -219,6 +227,7 @@ export const cases: CaseStudy[] = [
     tag: "Marketplace · Platform",
     url: "https://www.haskehub.com",
     cover: "#f3dccf",
+    image: { src: "/work/haskehub.webp", alt: "The HaskeHub home page: \u201cYour creativity deserves to be seen\u201d, with buttons to find creators or create a profile" },
     summary:
       "A two-sided marketplace connecting Ghanaian creators, brands and photo-friendly venues, with privacy-first introductions.",
     brief:
@@ -227,6 +236,7 @@ export const cases: CaseStudy[] = [
       "Creator profiles with reach, niche, town and portfolio",
       "Introductions that share contact details only after the creator accepts",
       "A directory of cafés, rooftops and studios that allow photography, with light windows and house rules",
+      "A text-message log for the team that follows every SMS to delivery and resends any that fail",
     ],
     services: ["Web development", "Software development"],
     facts: [

@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import { site } from "@/lib/site";
 import { founder, team, type Person } from "@/lib/team";
 import { CtaBand } from "@/components/CtaBand";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About",
   description: `Who we are and how ${site.name} works. Led by co-founder and CEO ${founder.name}.`,
-};
+  path: "about/",
+});
 
 function Avatar({ p, size }: { p: Person; size: "lg" | "sm" }) {
   if (p.photo) {

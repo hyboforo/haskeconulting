@@ -23,7 +23,6 @@ export type Founder = Omit<Person, "qualification"> & {
   /** Paragraphs for the founder section. */
   bio: string[];
   highlights: { value: string; label: string }[];
-  education: string[];
 };
 
 export const founder: Founder = {
@@ -42,10 +41,6 @@ export const founder: Founder = {
   highlights: [
     { value: "15+", label: "years delivering software" },
     { value: "25", label: "engineers, QA and support staff led" },
-  ],
-  education: [
-    "MSc Management Information Systems, Ghana Technology University College / Coventry University",
-    "BSc Computer Science, Ashesi University",
   ],
 };
 

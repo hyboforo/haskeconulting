@@ -39,7 +39,6 @@ export const founder: Founder = {
   ],
   highlights: [
     { value: "15+", label: "years delivering software" },
-    { value: "25", label: "engineers, QA and support staff led" },
   ],
 };
 

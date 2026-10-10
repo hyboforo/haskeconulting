@@ -1,4 +1,7 @@
 # Cloudflare response headers (works on Workers static assets and Pages).
+#
+# Content-Security-Policy: scripts and styles only from this site (Next.js writes its page data inline, hence
+# 'unsafe-inline'), plus Cloudflare Web Analytics. No plugins, no framing, and forms may only post here.
 
 /*
   X-Content-Type-Options: nosniff
@@ -6,6 +9,7 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'
 
 # Next.js hashed build files never change, so cache them for a year.
 /_next/static/*

@@ -14,6 +14,9 @@ export const site = {
   phone: "+233 26 416 4445",
   // Link to a booking page (Calendly, Cal.com, Google Calendar). Empty = falls back to email.
   bookingUrl: "",
+  // Cloudflare Web Analytics: the token from Analytics & Logs → Web Analytics → Add a site → "Manage site".
+  // Empty = no stats script. Cookie-free, so no consent banner is needed.
+  analyticsToken: "",
   // Street address is optional; the town is enough until you have an office to show.
   address: "Accra, Ghana",
 };
@@ -253,3 +256,58 @@ export const cases: CaseStudy[] = [
 
 /** Clients shown in the strip under the homepage hero. */
 export const clientNames = ["KODI Pets", "Haney's Plant Buddy", "HaskeHub"];
+
+/* ------------------------------------------------------------------ */
+/* Pricing and FAQ (Services page)                                     */
+/* ------------------------------------------------------------------ */
+
+/** The ways to work with us, each with how it's priced. */
+export const engagements = [
+  {
+    title: "A fixed-scope project",
+    body: "A defined system or website, delivered in milestones with an agreed price for each one.",
+    price: "A fixed price per milestone, agreed in the written scope before work starts.",
+  },
+  {
+    title: "Advice and reviews",
+    body: "A consultation, an architecture or security review, or a second opinion on a supplier's proposal.",
+    price: "A fixed fee for each review, agreed before we start.",
+  },
+  {
+    title: "Ongoing support",
+    body: "Hosting, monitoring, updates and improvements after launch, on a monthly plan.",
+    price: "A monthly fee, based on your hosting and how much help you need.",
+  },
+];
+
+/** Answered on the Services page, and given to search engines as an FAQ. */
+export const faqs: { q: string; a: string }[] = [
+  {
+    q: "How much will my project cost?",
+    a: "It depends on what it needs to do. After a free consultation we write a scope with you and give a fixed price for each milestone, so you know the cost before any work starts.",
+  },
+  {
+    q: "How long does a project take?",
+    a: "We agree the timeline in the written scope. The work is split into short milestones, each one delivered, tested and signed off by you, so you see progress throughout rather than waiting for the end.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "We train your staff, hand over documentation and stay on hand. Hosting, monitoring, updates and improvements are available on a monthly support plan.",
+  },
+  {
+    q: "Can you work with mobile money, SMS and WhatsApp?",
+    a: "Yes. They are part of how business works in Ghana, so we design for them from the start: mobile money payments, SMS confirmations and reminders, and WhatsApp ordering.",
+  },
+  {
+    q: "We already have a system. Can you help with it?",
+    a: "Yes. We usually start with a review of how it is built, where it will struggle and what to fix first. Then we can improve it, or help you choose and move to a replacement.",
+  },
+  {
+    q: "Do we need to be technical?",
+    a: "No. We explain things in plain language, write the scope with you, and you sign off each milestone by seeing it working, not by reading code.",
+  },
+  {
+    q: "Do you work with businesses outside Accra?",
+    a: "Yes. We are based in Accra and work with businesses across Ghana. Most of a project runs on calls and WhatsApp between milestones.",
+  },
+];

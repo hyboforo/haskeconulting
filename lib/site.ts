@@ -6,7 +6,7 @@ export const site = {
   tagline: "Software, web and IT consulting in Accra",
   description:
     "HaskeConsulting is an Accra-based technology company offering software development, web development, IT consulting and IT project management.",
-  email: "hello@haskeconsulting.com",
+  email: "info@haskeconsulting.com",
   // WhatsApp number in international format without + or spaces, e.g. "233200000000".
   // Leave empty to hide the WhatsApp buttons.
   whatsapp: "233264164445",

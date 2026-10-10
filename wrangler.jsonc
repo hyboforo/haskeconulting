@@ -1,9 +1,12 @@
 {
   // Cloudflare Workers static-assets config. `npm run deploy` builds ./out and uploads it.
-  "name": "haskeconsulting",
+  // The Worker's name in Cloudflare, which is spelled like the GitHub repo (no second "s").
+  "name": "haskeconulting",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": "./out",
     "not_found_handling": "404-page"
-  }
+  },
+  // Pull requests get a preview copy from `wrangler preview`, which needs this block (it can stay empty).
+  "previews": {}
 }

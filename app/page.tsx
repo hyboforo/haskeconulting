@@ -41,9 +41,7 @@ export default function Home() {
         <div className="container hero-grid">
           <div>
             <p className="eyebrow">Software · Web · IT consulting · Project management</p>
-            <h1 className="h-display" style={{ fontSize: "clamp(40px, 6vw, 72px)" }}>
-              Technology that works for your business.
-            </h1>
+            <h1 className="h-display">Technology that works for your business.</h1>
             <p className="lead">
               An Accra-based team that builds software and websites, advises on technology, and runs IT projects from first
               idea to go-live.
@@ -150,7 +148,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section--soft">
+      <section className="section section--accent">
         <div className="container">
           <p className="eyebrow">Why HaskeConsulting</p>
           <h2 className="h-section" style={{ marginBottom: 40, maxWidth: 720 }}>

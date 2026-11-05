@@ -412,6 +412,9 @@ h3 {
 .section--accent .eyebrow {
   color: #ffb98c;
 }
+.section--accent .tools__label {
+  color: #ffe4d4;
+}
 .btn {
   border-color: var(--accent);
 }
@@ -501,6 +504,10 @@ h3 {
   font-weight: 700;
   color: var(--muted);
   text-decoration: none;
+  transition: color 0.15s;
+}
+.clients__name:hover {
+  color: var(--accent-text);
 }
 
 .path {
@@ -1039,6 +1046,7 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
+  color: var(--text);
   font-size: 14px;
   font-weight: 500;
 }

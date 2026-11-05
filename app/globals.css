@@ -408,12 +408,12 @@ h3 {
 .section--accent {
   color: #fff;
 }
-.section--ink .eyebrow,
-.section--accent .eyebrow {
+.section--ink .eyebrow {
   color: #ffb98c;
 }
+.section--accent .eyebrow,
 .section--accent .tools__label {
-  color: #ffe4d4;
+  color: var(--accent-ink);
 }
 .btn {
   border-color: var(--accent);
@@ -436,12 +436,12 @@ h3 {
 }
 .btn--light {
   background: #fff;
-  color: var(--accent);
+  color: var(--accent-text);
   border-color: #fff;
 }
 .btn--light:hover {
   background: var(--soft);
-  color: var(--accent-dark);
+  color: var(--accent-text);
 }
 .btn--outline-light {
   color: #fff;
@@ -449,7 +449,7 @@ h3 {
 }
 .btn--outline-light:hover {
   background: #fff;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .nav {
   align-items: center;
@@ -505,9 +505,6 @@ h3 {
   color: var(--muted);
   text-decoration: none;
   transition: color 0.15s;
-}
-.clients__name:hover {
-  color: var(--accent-text);
 }
 
 .path {
@@ -593,7 +590,7 @@ h3 {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .case__body h3 {
   font-size: 24px;
@@ -621,7 +618,7 @@ h3 {
   content: "0" counter(step);
   font-family: var(--display);
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 15px;
 }
 .steps h3 {
@@ -728,7 +725,7 @@ h3 {
 .founder__role {
   margin: 6px 0 0;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .founder__body {
   display: flex;
@@ -780,7 +777,7 @@ h3 {
   gap: 8px;
   min-height: 44px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   align-self: flex-start;
 }
 
@@ -811,7 +808,7 @@ h3 {
 .team-card__role {
   margin: 0 0 6px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   font-size: 15px;
 }
 .team-card .muted {
@@ -937,7 +934,7 @@ h3 {
   gap: 6px;
   min-height: 44px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .service-row {
@@ -1101,7 +1098,7 @@ h3 {
   }
 }
 a.clients__name:hover {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 /* Case covers with a screenshot rising from the bottom edge. */
@@ -1310,7 +1307,7 @@ a.clients__name:hover {
   font: inherit;
   font-size: 15px;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--accent-text);
   text-decoration: underline;
   cursor: pointer;
 }

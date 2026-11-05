@@ -148,6 +148,20 @@ export const products: Product[] = [
       "Business profiles taskers manage themselves",
     ],
   },
+  {
+    slug: "smartsukuu",
+    name: "SmartSukuu",
+    url: "https://www.smartsukuu.com",
+    tagline: "A school management platform: students, fees, gate security, results and payroll, in one system.",
+    forWho: "Head teachers, bursars, office staff and teachers who need the whole school's day in one place.",
+    features: [
+      "QR gate passes and pick-up security, with a staff app that keeps scanning offline",
+      "Fees, payments and receipts, with discounts and overdue reminders to parents by text and email",
+      "Grading scales, marks entry and end-of-term report cards, built for Ghana's GES grades and BECE aggregates",
+      "A parent app for arrivals, fees, reports and messages, and a staff app for registers, the gate and marks",
+      "Payroll with SSNIT and PAYE worked out automatically, payslips and a money book",
+    ],
+  },
 ];
 
 /* ------------------------------------------------------------------ */

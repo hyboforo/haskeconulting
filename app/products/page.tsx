@@ -5,7 +5,7 @@ import { CtaBand } from "@/components/CtaBand";
 
 export const metadata: Metadata = pageMeta({
   title: "Products",
-  description: "Taskers Ghana, the in-house product built and run by HaskeConsulting.",
+  description: "Taskers Ghana and SmartSukuu, the in-house products built and run by HaskeConsulting.",
   path: "products/",
 });
 
@@ -15,10 +15,10 @@ export default function Products() {
       <section className="section section--soft">
         <div className="container">
           <p className="eyebrow">Products</p>
-          <h1 className="h-page">Our product.</h1>
+          <h1 className="h-page">Our products.</h1>
           <p className="lead">
-            Alongside client work, we build and run our own product, Taskers Ghana. Running it every day keeps us honest about
-            what it takes to keep software working after launch.
+            Alongside client work, we build and run our own products, Taskers Ghana and SmartSukuu. Running them every day keeps us
+            honest about what it takes to keep software working after launch.
           </p>
         </div>
       </section>

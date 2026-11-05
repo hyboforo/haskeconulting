@@ -56,7 +56,7 @@ export const team: Person[] = [
   {
     name: "Salifu Boforo Yakubu",
     initials: "SY",
-    role: "Co-founder & Lead Developer",
+    role: "Lead Developer",
     photo: "",
     linkedin: "https://www.linkedin.com/in/salifu-yakubu",
     github: "https://github.com/salifu25",

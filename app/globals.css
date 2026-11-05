@@ -1,19 +1,21 @@
 
 :root {
-  --ink: #16181d;
-  --ink-2: #22252c;
-  --ink-line: #2e3139;
-  --paper: #ffffff;
-  --paper-2: #dce7e2;
-  --soft: #f2f6f4;
-  --line: #e3e6e4;
-  --text: #16181d;
-  --muted: #3f4a46;
-  --muted-on-ink: #c4c7cc;
-  --accent: #0f5c4a;
-  --accent-dark: #0b4538;
-  --accent-text: #0f5c4a;
-  --radius: 10px;
+  --ink: #17130f;
+  --ink-2: #221b14;
+  --ink-line: #352a1f;
+  --paper: #fbf7f0;
+  --paper-2: #f0e2d2;
+  --soft: #f3ebdd;
+  --line: #e6dac5;
+  --text: #17130f;
+  --muted: #5c5347;
+  --muted-on-ink: #d6c9b8;
+  --accent: #ff4d1a;
+  --accent-dark: #d93d0f;
+  --accent-text: #c23a0c;
+  --accent-soft: #ffe4d4;
+  --accent-ink: #17130f;
+  --radius: 14px;
   --display: "Bricolage Grotesque Variable", "Bricolage Grotesque", system-ui, sans-serif;
   --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
@@ -277,7 +279,7 @@ h3 {
 /* Company cards */
 .company {
   background: var(--ink-2);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -408,25 +410,26 @@ h3 {
 }
 .section--ink .eyebrow,
 .section--accent .eyebrow {
-  color: #8fd8c2;
+  color: #ffb98c;
 }
 .btn {
   border-color: var(--accent);
 }
 .btn--solid {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
+  font-weight: 700;
 }
 .btn--solid:hover {
   background: var(--accent-dark);
-  color: #fff;
+  color: var(--accent-ink);
 }
 .btn--ghost {
-  color: var(--accent);
+  color: var(--accent-text);
 }
 .btn--ghost:hover {
   background: var(--accent);
-  color: #fff;
+  color: var(--accent-ink);
 }
 .btn--light {
   background: #fff;
@@ -501,7 +504,7 @@ h3 {
 }
 
 .path {
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -556,7 +559,7 @@ h3 {
 
 .case {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   text-decoration: none;
   display: flex;
@@ -566,7 +569,7 @@ h3 {
 }
 .case:hover {
   color: var(--text);
-  box-shadow: 0 8px 28px rgba(15, 61, 51, 0.12);
+  box-shadow: 0 8px 28px rgba(23, 19, 15, 0.12);
 }
 .case__img {
   aspect-ratio: 16 / 10;
@@ -628,7 +631,7 @@ h3 {
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
 }
@@ -742,7 +745,7 @@ h3 {
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
 }
@@ -786,7 +789,7 @@ h3 {
   align-items: flex-start;
   padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   background: #fff;
 }
 .team-card__text {
@@ -820,11 +823,11 @@ h3 {
 }
 .chips li {
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
   padding: 4px 10px;
   border-radius: 999px;
-  background: var(--soft);
-  color: var(--accent-dark);
+  background: var(--accent-soft);
+  color: var(--accent-text);
 }
 .team-card__edu {
   margin: 6px 0 0;
@@ -845,7 +848,7 @@ h3 {
   background: #fff;
   border-radius: 14px;
   padding: 10px;
-  box-shadow: 0 10px 40px rgba(15, 61, 51, 0.08);
+  box-shadow: 0 10px 40px rgba(23, 19, 15, 0.08);
 }
 .hero-services__item {
   display: flex;
@@ -876,7 +879,7 @@ h3 {
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--soft);
   color: var(--accent);
   display: inline-flex;
@@ -901,7 +904,7 @@ h3 {
   gap: 12px;
   padding: 28px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none;
   color: var(--text);
   background: #fff;
@@ -910,7 +913,7 @@ h3 {
 .service-card:hover {
   color: var(--text);
   border-color: var(--accent);
-  box-shadow: 0 8px 28px rgba(15, 61, 51, 0.1);
+  box-shadow: 0 8px 28px rgba(23, 19, 15, 0.1);
 }
 .service-card h3 {
   font-size: 22px;
@@ -988,7 +991,7 @@ h3 {
 
 .reason {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -1123,10 +1126,10 @@ a.clients__name:hover {
 .browser {
   margin: 0 0 32px;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   background: #fff;
-  box-shadow: 0 12px 40px rgba(15, 61, 51, 0.1);
+  box-shadow: 0 12px 40px rgba(23, 19, 15, 0.1);
 }
 .browser__bar {
   display: flex;
@@ -1166,7 +1169,7 @@ a.clients__name:hover {
 }
 .client-row__cover {
   display: block;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);
   text-decoration: none;

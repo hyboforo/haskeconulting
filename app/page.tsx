@@ -85,7 +85,7 @@ export default function Home() {
             ))}
           </div>
           <div className="clients__group clients__group--sep">
-            <span className="clients__label">Our product</span>
+            <span className="clients__label">Our products</span>
             {products.map((p) => (
               <Link key={p.slug} href="/products/" className="clients__name">
                 {p.name}

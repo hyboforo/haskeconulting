@@ -34,7 +34,7 @@ const organization = {
   knowsAbout: services.map((s) => s.name),
 };
 
-export const viewport: Viewport = { themeColor: "#ff4d1a" };
+export const viewport: Viewport = { themeColor: "#e8541c" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

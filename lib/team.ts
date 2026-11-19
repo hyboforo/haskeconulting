@@ -53,25 +53,4 @@ export const team: Person[] = [
       "Whitney co-founded HaskeConsulting and, as Chief Operating Officer, runs the business day to day, keeping projects, people and clients moving together. Whitney also leads creative direction and marketing: the brand, the campaigns and the way our work for clients is presented to the world.",
     skills: ["Operations", "Creative direction", "Marketing"],
   },
-  {
-    name: "Salifu Boforo Yakubu",
-    initials: "SY",
-    role: "Lead Developer",
-    photo: "",
-    linkedin: "https://www.linkedin.com/in/salifu-yakubu",
-    github: "https://github.com/salifu25",
-    short:
-      "Salifu leads development at HaskeConsulting, building the Java and Spring Boot backends behind our products, with automated testing built in from the start. At Patatte, Salifu leads backend development for a food-ordering product and designed its order and notification services.",
-    skills: ["Java & Spring Boot", "REST APIs", "PostgreSQL", "Docker", "Automated testing"],
-    qualification: "BSc Information Technology, Ghana Communication Technology University",
-  },
-  {
-    name: "Angela Ayettey",
-    initials: "AA",
-    role: "Quality Assurance",
-    photo: "",
-    linkedin: "https://www.linkedin.com/in/angela-ayettey-b18706361/",
-    short:
-      "Angela looks after quality assurance at HaskeConsulting: planning tests, checking every release against what was agreed with the client, and supporting user acceptance testing before anything goes live.",
-  },
 ];
